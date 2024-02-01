@@ -1,0 +1,28 @@
+Certainly! Let's identify the code smells and perform the refactoring. Here are the identified code smells and corresponding refactoring techniques:
+
+### Code Smells:
+
+#### 1. Large Class (God Class):
+   - The `Product` class has multiple responsibilities (name, price, quantity) and lacks cohesion.
+   
+#### Refactoring Technique:
+   - **Extract Class:**
+     - Create a separate class for `Product` with appropriate responsibilities.
+
+#### 2. Long Function:
+   - The `display_inventory` function is quite long, making it less readable.
+
+#### Refactoring Technique:
+   - **Extract Function:**
+     - Break down the `display_inventory` function into smaller, more focused functions.
+
+#### 3. Primitive Obsession:
+   - Use of primitive types (`string`, `int`, `double`) instead of creating a domain-specific class for `Product`.
+
+#### Refactoring Technique:
+   - **Introduce Parameter Object:**
+     - Create a `Product` class to encapsulate the data related to a product.
+
+### Refactored Code:
+
+# 
