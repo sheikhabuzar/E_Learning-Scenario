@@ -18,3 +18,7 @@ Elearning::void createrecords()
 {
 //Here we creating records 
 }
+Elearning::void updaterecords()
+{
+//Here we updating the records records 
+}
