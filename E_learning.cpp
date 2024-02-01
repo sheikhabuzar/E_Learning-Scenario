@@ -14,3 +14,7 @@ int main()
 {
 
 }
+Elearning::void createrecords()
+{
+//Here we creating records 
+}
