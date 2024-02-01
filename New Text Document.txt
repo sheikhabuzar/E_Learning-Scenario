@@ -1,0 +1,41 @@
+Refactored Code
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+class Product {
+public:
+string name;
+double price;
+int quantity;
+Product(string n, int q, double p) : name(n), quantity(q), price(p) {}
+void displayProduct() {
+cout << "Name: " << name << ", Quantity: " << quantity << ", Price: " << price << endl;
+}
+};
+class Inventory {
+private:
+    vector<Product> products;
+
+public:
+    void addProduct(string name, int quantity, double price) {
+        products.push_back(Product(name, quantity, price));
+    }
+
+    void displayInventory() {
+        cout << "Inventory:\n";
+        for (auto &product : products) {
+            product.displayProduct();
+        }
+    }
+};
+
+int main() {
+    Inventory inventory;
+    inventory.addProduct("Item1", 10, 5.99);
+    inventory.addProduct("Item2", 20, 10.99);
+    inventory.addProduct("Item3", 5, 15.99);
+    inventory.displayInventory();
+
+    return 0;
+}
